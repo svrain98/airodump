@@ -3,7 +3,7 @@ all: airodump
 airodump: main.o
 	g++ -o airodump main.o -lpcap
 
-main.o: main.cpp beacon.h
+main.o: main.cpp beacon.h station.h
 	g++ -Wall -c -o main.o main.cpp 
 
 clean:
