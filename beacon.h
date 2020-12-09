@@ -53,12 +53,19 @@ public:
         }
         string rt_st(nessid);
         const char *cstr=str.c_str();
+        
         if(cstr[0]==0x00){
             string mid=to_string(st_len);
-            string rt="<length : "+mid+">";
+            
+            string rt="<length: "+mid+">";
             return rt;
         }
         else
+        {
+            if(rt_st.empty()){
+            return "<length:  0>";
+        }
+        }
         return rt_st;
     }
 	void printB(){
